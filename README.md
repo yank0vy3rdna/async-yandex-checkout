@@ -1,3 +1,4 @@
+![Upload Python Package](https://github.com/yank0vy3rdna/async-yandex-checkout/workflows/Upload%20Python%20Package/badge.svg)
 # async_yandex_checkout
 
 Async yandex checkout api wrapper for python
