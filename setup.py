@@ -1,20 +1,20 @@
 import setuptools
-
+from . import __version__
 with open('README.md') as f:
     text = f.read()
 
 setuptools.setup(
     name="async_yandex_checkout",
-    version="0.0.1",
+    version=__version__,
     author="yank0vy3rdna",
     author_email="yankovyerdna@yandex.ru",
     description="Yandex checkout async api wrapper",
     long_description=text,
     long_description_content_type="text/markdown",
     license="GPLv3",
-    url="https://github.com/yank0vy3rdna",
-    packages=["aio_yandex_translate"],
-    package_dir={"aio_yandex_translate": ""},
+    url="https://github.com/yank0vy3rdna/async-yandex-checkout",
+    packages=["async_yandex_checkout"],
+    package_dir={"async_yandex_checkout": ""},
     install_requires=["aiohttp>=3.6", "aiohttp-proxy>=0.1.2"],
     extras_require={"ujson": ""},
     classifiers=[
