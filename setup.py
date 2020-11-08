@@ -1,5 +1,5 @@
 import setuptools
-from . import __version__
+from async_yandex_checkout import __version__
 with open('README.md') as f:
     text = f.read()
 

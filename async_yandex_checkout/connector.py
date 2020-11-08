@@ -1,6 +1,6 @@
 import aiohttp
 
-from configuration import configuration
+from async_yandex_checkout.configuration import configuration
 
 
 class Connector:

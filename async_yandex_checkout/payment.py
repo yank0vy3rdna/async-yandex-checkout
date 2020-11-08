@@ -1,7 +1,7 @@
 import uuid
 from enum import Enum
 
-from connector import Connector
+from async_yandex_checkout.connector import Connector
 
 
 class Status(Enum):
