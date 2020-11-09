@@ -49,7 +49,8 @@ class Payment:
     def update_fields(self, response):
         self.status = Status(response.get("status"))
         self.id = response.get("id")
-        self.confirmation_url = response.get("confirmation").get("confirmation_url")
+        if "confirmation" in response:
+            self.confirmation_url = response.get("confirmation").get("confirmation_url")
         self.payment_object = response
 
     async def update(self, payment_id=None, idempotency_key=None):
