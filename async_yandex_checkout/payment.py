@@ -52,13 +52,16 @@ class Payment:
         self.confirmation_url = response.get("confirmation").get("confirmation_url")
         self.payment_object = response
 
-    async def update(self, idempotency_key=None):
+    async def update(self, payment_id=None, idempotency_key=None):
+        if payment_id is None:
+            payment_id = self.id
         if self.idempotency_key is None:
             if idempotency_key is None:
                 idempotency_key = str(uuid.uuid4())
             self.idempotency_key = idempotency_key
         else:
             idempotency_key = self.idempotency_key
-        response = await self.client.request(f"{self.base_path}/{self.id}",
+
+        response = await self.client.request(f"{self.base_path}/{payment_id}",
                                              headers={"Idempotence-Key": idempotency_key}, method='GET')
         self.update_fields(response)
