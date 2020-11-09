@@ -14,8 +14,8 @@ setuptools.setup(
     license="GPLv3",
     url="https://github.com/yank0vy3rdna/async-yandex-checkout",
     packages=["async_yandex_checkout"],
-    package_dir={"async_yandex_checkout": ""},
-    install_requires=["aiohttp>=3.6", "aiohttp-proxy>=0.1.2"],
+    # package_dir={"": ""},
+    install_requires=["aiohttp>=3.6"],
     extras_require={"ujson": ""},
     classifiers=[
         "Programming Language :: Python :: 3.6",
